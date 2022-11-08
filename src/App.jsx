@@ -70,22 +70,22 @@ function App() {
               <div>
                 <p>
                   {" "}
-                  <b>Nombre:</b>
+                  <b>Name: </b>
                   {location.name}
                 </p>
                 <p>
-                  <b>Type:</b>
+                  <b>Type: </b>
                   {location.type}{" "}
                 </p>
               </div>
               <div>
                 <p>
                   {" "}
-                  <b>Dimensión:</b>
+                  <b>Dimension: </b>
                   {location.dimension}{" "}
                 </p>
                 <p>
-                  <b>Cantidad de habitantes:</b>
+                  <b>Population: </b>
                   {location.residents?.length}{" "}
                 </p>
               </div>

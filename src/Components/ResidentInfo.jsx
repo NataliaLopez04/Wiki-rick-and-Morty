@@ -25,8 +25,8 @@ const ResidentInfo = ({ url }) => {
       <br />
       <ul>
         <li>Status: {character.status}</li>
-        <li>Origen: {character.origin?.name}</li>
-        <li>Episodes: {character.episode?.length}</li>
+        <li>Origin: {character.origin?.name}</li>
+        <li>Episodes where appear: {character.episode?.length}</li>
       </ul>
       <div class="toggle">
         <i class="fa fa-chevron-down" aria-hidden="true"></i>
