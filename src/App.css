@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: solid 3px red; */
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-image: url(https://i.pinimg.com/originals/d4/0c/ea/d40cea0d3893378e7a96e441452dfcaf.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #31e1f7;
+}
+
+body {
+  text-align: center;
+  height: 100%;
+  font-family: "Poor Story", cursive;
+}
+
+.containerPrimary {
+  width: 80%;
+  box-shadow: 1px 5px 36px #d800a6;
+  -webkit-box-shadow: 1px 5px 36px #d800a6;
+  -moz-box-shadow: 1px 5px 36px #d800a6;
+}
+
+.containerNavBar {
+  width: 100%;
+  height: 30%;
+  background-color: #400d51;
+}
+
+.containerTitle {
+  font-family: "Poor Story", cursive;
+  display: inline-block;
+  width: max-content;
+  padding: 0 10px;
+
+  text-shadow: 3px 1px 14px #0a0000;
+}
+
+.containerTitle > * {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.containerTitle > :last-child {
+  transform: rotateX(180deg) translateY(28px);
+  mask-image: linear-gradient(transparent 50%, white 90%);
+  -webkit-mask-image: linear-gradient(transparent 50%, white 90%);
+  opacity: 0.72;
+}
+
+.imageNavBar {
+  width: 100%;
+  filter: drop-shadow(12px 11px 16px #000);
+}
+
+.App {
+  background-color: #400d51;
+  color: #31e1f7;
+  height: 80%;
+}
+
+.containerLoading {
+  height: 510px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imageRotate {
+  animation: rotation 4s infinite linear;
+  width: 50px;
+  height: 50px;
+}
+
+.imageLoading {
+  animation: rotation 4s infinite linear;
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(12px 11px 16px #000);
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  text-shadow: 3px 1px 14px #0a0000;
+  font-size: 1.5em;
+}
+
+.imageFooter {
+  filter: drop-shadow(12px 11px 16px #000);
+  height: 300px;
+}
+
+.search {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: #404258;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  height: 80%;
+  width: 600px;
+  position: relative;
+  padding: 1em 3em;
+  color: rgb(110, 237, 237);
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5em rgb(110, 237, 237);
+  background-color: rgb(44, 157, 157);
+  border: 0.25em solid rgb(110, 237, 237);
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0.25em rgb(110, 237, 237),
+    0 0 4em 1em rgba(65, 243, 243, 0.781),
+    inset 0 0 0.75em 0.25em rgb(110, 237, 237);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+input::placeholder {
+  color: rgb(110, 237, 237);
+}
+
+input::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(65, 243, 243, 0.781);
+  filter: blur(2em);
+  opacity: 0.7;
+  pointer-events: none;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+button {
+  height: 80%;
+  position: relative;
+  padding: 1em 3em;
+  color: rgb(110, 237, 237);
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5em rgb(110, 237, 237);
+  background-color: rgb(44, 157, 157);
+  border: 0.25em solid rgb(110, 237, 237);
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0.25em rgb(110, 237, 237),
+    0 0 4em 1em rgba(65, 243, 243, 0.781),
+    inset 0 0 0.75em 0.25em rgb(110, 237, 237);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  color: rgb(44, 157, 157);
+  background-color: rgb(110, 237, 237);
+  box-shadow: 0 0 1em 0.25em rgb(110, 237, 237),
+    0 0 4em 1em rgba(65, 243, 243, 0.781),
+    inset 0 0 0.75em 0.25em rgb(110, 237, 237);
+}
+
+button:active {
+  box-shadow: 0 0 0.6em 0.25em rgb(110, 237, 237),
+    0 0 2.5em 2em rgba(65, 243, 243, 0.781),
+    inset 0 0 0.5em 0.25em rgb(110, 237, 237);
+}
+
+.containerInfo {
+  background-color: #404258;
+  font-family: "Poor Story", cursive;
+  height: 200px;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-shadow: 3px 1px 14px #0a0000;
+}
+
+.containerInfo > div {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  font-family: "Poor Story", cursive;
+  margin: 0 auto;
+
+  position: relative;
+  padding: 1em 3em;
+  color: rgb(110, 237, 237);
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 3px 1px 14px #0a0000;
+  /* background-color: rgb(44, 157, 157); */
+  border: 0.25em solid rgb(110, 237, 237);
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0.25em rgb(110, 237, 237),
+    0 0 4em 1em rgba(65, 243, 243, 0.781),
+    inset 0 0 0.75em 0.25em rgb(110, 237, 237);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  background-color: rgb(44, 157, 157);
+}
+
+.image {
+  border-radius: 1em;
+  width: 120px;
+}
+
+.containerCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 15px 0;
+  gap: 10px;
+  text-shadow: 3px 1px 14px #0a0000;
+}
+
+ul {
+  list-style: none;
+}
